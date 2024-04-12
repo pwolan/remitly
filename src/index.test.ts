@@ -23,4 +23,10 @@ describe(`It not finds '*' in Resources`, ()=>{
   test(`In json with multiple resources`, () => {
     expect(hasAsterisk('resources/data2.json')).toBe(true);
   })
+  test(`In json with resource that contains only '**' `, () => {
+    expect(hasAsterisk('resources/data3.json')).toBe(true);
+  })
+  test(`In json with resources that contains only '**' `, () => {
+    expect(hasAsterisk('resources/data4.json')).toBe(true);
+  })
 })
